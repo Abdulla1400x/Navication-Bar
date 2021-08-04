@@ -518,10 +518,11 @@ body footer{
     color: #EF476F;
 }
 header {
-	z-index: 99;
-	position: sticky;
-        top: 0%;
-        background: white;
+    z-index: 99;
+    position: sticky;
+    top: 0%;
+    box-shadow: 0px -2px 10px black;
+    background: white;
 }
 
 
