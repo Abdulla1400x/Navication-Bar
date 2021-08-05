@@ -1,638 +1,587 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-* { margin: 0px; padding: 0px; }
-body { font-family: Roboto, sans-serif; }
-.container { width: 1140px; padding: 0px 15px; margin: auto; }
-.navbar { display: flex; justify-content: space-between; padding: 20px 0px; align-content: center; }
-.menu { display: flex; list-style: none; }
-.menu li { padding: 10px 13px; }
-.menu li a { text-decoration: none; color: rgb(19, 19, 19); display: block; font-weight: 500; font-size: 14px; text-transform: uppercase; border-top: 1px solid transparent; padding-top: 3px; }
-.menu li:last-child a { background: rgb(239, 71, 111); color: white; width: 28px; display: grid; height: 24px; border-radius: 100%; place-content: center; margin-top: -2px; }
-.menu li:last-child:hover a { color: white; background: rgb(250, 39, 88); border-top: 1px solid transparent; }
-.menu li:first-child a { color: rgb(239, 71, 111); border-top: 1px solid rgb(239, 71, 111); }
-.menu li a:hover { color: rgb(239, 71, 111); border-top: 1px solid rgb(239, 71, 111); }
-.uppercolor { width: 100%; height: 8px; display: flex; }
-.uppercolor span:nth-child(1) { background: rgb(239, 71, 111); height: 100%; width: 25%; display: flex; }
-.uppercolor span:nth-child(2) { background: rgb(38, 84, 124); height: 100%; width: 25%; display: flex; }
-.uppercolor span:nth-child(3) { background: rgb(6, 202, 117); height: 100%; width: 25%; display: flex; }
-.uppercolor span:nth-child(4) { background: rgb(0, 216, 255); height: 100%; width: 25%; display: flex; }
-.ii_side { display: flex; justify-content: space-between; padding: 100px 0px; }
-.ii_side .boxs:nth-child(1) { flex-basis: 32%; background: rgb(6, 202, 117); height: 209px; position: relative; text-align: center; }
-.ii_side .boxs:nth-child(2) { flex-basis: 32%; background: rgb(239, 71, 111); height: 209px; position: relative; text-align: center; }
-.ii_side .boxs:nth-child(3) { flex-basis: 32%; background: rgb(38, 84, 124); height: 209px; position: relative; text-align: center; }
-.logo_1 { background: rgb(6, 202, 117); width: 80px; height: 80px; border-radius: 100%; display: grid; position: absolute; place-items: center; left: 50%; transform: translateX(-41px); margin-top: -50px; border: 2px solid white; }
-.logo_3 { background: rgb(38, 84, 124); width: 80px; height: 80px; border-radius: 100%; display: grid; position: absolute; place-items: center; left: 50%; transform: translateX(-41px); margin-top: -50px; border: 2px solid white; }
-.logo_2 { background: rgb(239, 71, 111); width: 80px; height: 80px; border-radius: 100%; display: grid; position: absolute; place-items: center; left: 50%; transform: translateX(-41px); margin-top: -50px; border: 2px solid white; }
-.boxs { color: white; }
-.title { margin-top: 60px; font-size: 14px; }
-.content { margin-top: 35px; font-size: 14px; width: 362px; }
-.title::before { content: ""; border-bottom: 1px solid white; width: 83px; position: absolute; left: 50%; transform: translateX(-40px); top: 46%; }
-.title::after { content: ""; border-bottom: 1px solid white; width: 60px; position: absolute; left: 50%; transform: translateX(-29px); top: 48%; }
-.logo_1\:2 { position: absolute; right: 0%; bottom: 0%; opacity: 0.1; }
-body section:nth-child(4) { background: rgb(6, 202, 117); }
-.iii_side { display: flex; position: relative; padding: 105px 0px; }
-.heading h1:first-child { padding-right: 12px; color: white; margin-bottom: 40px; text-transform: uppercase; }
-.heading h1:last-child {color: rgb(38, 84, 124);text-transform: uppercase;}
-.buton { display: block; background: rgb(38, 84, 124); color: white; text-decoration: none; text-transform: uppercase; font-weight: 600; font-family: arial; width: 147px; font-size: 14px; text-align: center; padding: 18px 7px; border-radius: 6px; margin-top: 26px; }
-.heading { display: flex; font-size: 35px; }
-.answer { color: white; font-size: 16px; font-weight: 300; line-height: 25px; }
-.text { margin-left: 90px; }
-.s4_head {font-size: 25px;text-align: center;text-transform: uppercase;color: #525252;margin-bottom: 50px;}
-.s4_head::after { content: "-----------"; right: 46%; letter-spacing: 3px; }
-.saritem {background: url("pics/S4_BGCircle.png") no-repeat center center scroll;position: relative;padding: 207px 0px;}
-.s4_altxt_i { position: absolute; top: 10%; }
-.s4_l1 { position: absolute; top: 15%; left: 30%; }
-.s4_l2 { position: absolute; top: 15%; left: 60%; }
-.s4_l3 { position: absolute; top: 60%; left: 30%; }
-.s4_l4 { position: absolute; top: 60%; right: 30%; }
-.s4_altxt_i { width: 350px; text-align: right; position: absolute; top: 12%; left: -4%; }
-.s4_altxt_ii { width: 350px; text-align: right; position: absolute; top: 60%; left: -4%; }
-.s4_altxt_iii { width: 350px; text-align: left; top: 12%; position: absolute; right: -2%; }
-.s4_altxt_iv { width: 350px; text-align: left; position: absolute; right: -2%; top: 60%; }
-.s4_title{font-size: 23px; color: #525252; margin-bottom: 10px;}
-.s4_p{color: rgb(160, 160, 160); font-size: 15x; line-height: 27px; font-weight: 100;}
-.services{padding: 90px 0px;}
-body section:nth-child(6) { background: #26547C; }
-.s5_main{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px 0px;
-}
-.s5_alltxt{
-    width: 540px;
-}
-.s5_i_title{
-    color: #06CA75;
-    font-size: 21px;
-}
-.s5_ii_title{
-    color: white;
-    font-size: 32px;
-    font-weight: bolder;
-    padding-bottom: 20px;
-}
-.s5_answer{
-    color: white;
-    font-size: 15px;
-    font-weight: 100;
-    line-height: 22px;
-}
-.s5_buton a{
-    color: white;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 14px;
-    text-decoration: none;
-    width: 110px;
-    background: #06CA75;
-    padding: 18px 32px;
-    margin-top: 20px;
-    display: block;
-    text-align: center;
-    border-radius: 6px;
-}
-.s6_allpic{
-    display: flex;
-    justify-content: space-around;
-}
-.s6_title{
-    display: flex;
-    justify-content: space-around;
-    color: #525252;
-    text-transform: uppercase;
-    font-size: 14px;
-    padding: 10px 0px;
-    font-weight: 900;
-}
-.s6_title h3:nth-child(1){
-    margin-left: 27px;
-}
-.s6_title h3:nth-child(2){
-    margin-left: 32px;
-}
-.s6_title h3:nth-child(4){
-    margin-right: 10px;
-}
-.s6_answer{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    color: rgb(167, 167, 167);
-    font-size: 14px;
-    font-weight: 100;
-}
-.s6_answer p:nth-child(1):before{
-    content: "-------->";
-    position: absolute;
-    color: #525252;
-    font-size: 32px;
-    font-weight: 500;
-    letter-spacing: 5px;
-    top: 50%;
-    left: 19%;
-}
-.s6_answer p:nth-child(2):before{
-    content: "-------->";
-    position: absolute;
-    color: #525252;
-    font-size: 32px;
-    font-weight: 500;
-    letter-spacing: 5px;
-    top: 50%;
-    left: 44%;
-}
-.s6_answer p:nth-child(3):before{
-    content: "-------->";
-    position: absolute;
-    color: #525252;
-    font-size: 32px;
-    font-weight: 500;
-    letter-spacing: 5px;
-    top: 50%;
-    left: 69%;
-}
-.s6_main{
-    position: relative;
-    padding: 130px 0px;
-}
-body section:nth-child(8){background: #EF476F;}
-.s7_head{color: white;}
-.s7_box{
-    background: white;
-    width: 370px;
-}
-.allcontent{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.s7_alltxt{
-    text-align: left;
-    width: 300px;
-    margin: auto;
-}
-.s7_alltxt h3{
-    color: #525252;
-    padding: 16px 0px;
-    font-weight: 500;
-}
-.s7_alltxt p{
-    color: rgb(155, 155, 155);
-    font-size: 15px;
-    font-weight: 100;
-    line-height: 23px;
-}
-.s7_box{
-    padding-bottom: 25px;
-}
-.s7_main{
-    padding: 100px 0px;
-}
-.s8_contant{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
-.s8_head{
-    margin-bottom: 150px;
-}
-.s8_b{
-    width: 350px;
-    position: relative;
-    padding: 50px 0px;
-    border-radius: 4px;
-    position: relative;
-}
-.s8_b1{
-    background: #EF476F;
-}
-.s8_b2{
-    background: #06CA75;
-}
-.s8_b3{
-    background: #26547C;
-}
-.s8_b h1{
-    font-size: 32px;
-    padding: 40px 0px;
-}
-.s8_b p{
-    line-height: 38px;
-}
-.s8_c_box{
-    position: absolute;
-    top: -12%;
-    left: 34%;
-    border: 4px solid white;
-    width: 110px;
-    height: 110px;
-    display: grid;
-    place-content: center;
-    border-radius: 100%;
-}
-.s8_c_box h1{
-    font-size: 40px;
-}
-.iii{
-    background: #26547C;
-}
-.ii{
-    background: #06CA75;
-}
-.i{
-    background: #EF476F;
-}
-.s8_buton{
-    padding: 15px 0px;
-    padding-top: 60px;
-}
-.s8_buton a{
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    background: transparent;
-    border: 2px solid white;
-    width: 200px;
-    padding: 8px 40px;
-}
-.s8_btn1:hover a{
-    background: white;
-    color: #EF476F;
-}.s8_btn2:hover a{
-    background: white;
-    color: #06CA75;
-}
-.s8_btn3:hover a{
-    background: white;
-    color: #26547C;
-}
-.s8_title{
-    position: relative;
-}
-.s8_c_box b{
-    color: white;
-    position: absolute;
-    left: 18%;
-    top: 28%;
-    font-size: 20px;
-}
-.s8_c_box p{
-    color: white;
-    position: absolute;
-    left: 73%;
-    top: 40%;
-    font-size: 20px;
-}
-.s8_main{
-    padding: 100px 0px;
-}
-body section:nth-child(10){background: #06CA75;}
-.s9_main{
-    padding: 70px 0px;
-}
-.s9_person_main{
-    display: flex;
-    justify-content: space-around;
-}
-.s9_person{
-    display: flex;
-    margin-right: 161px;
-    padding-bottom: 15px;
-}
-.s9_pic{
-    margin-right: 20px;
-}
-.s9_pic img{
-    width: 59px;
-    height: 59px;
-    border-radius: 100%;
-}
-.s9_title{
-    color: white;
-}
-.s9_answer{
-    display: flex;
-}
-.s9_answer div:nth-child(1){
-    padding-right: 30px;
-}
-.s9_answer div:nth-child(2){
-    padding-right: 50px;
-}
-.s9_p{
-    width: 340px;
-    line-height: 25px;
-    font-size: 15px;
-    color: white;
-    font-weight: 100;
-}
-.s10_para{
-    width: 48%;
-}
-.s10_title{
-    padding-bottom: 30px;
-}
-.s10_title a{
-    text-decoration: none;
-    color: #525252;
-}
-.s10_answer{
-    color: rgb(145, 145, 145);
-    font-size: 15px;
-    font-weight: 100;
-    line-height: 25px;
-    padding-bottom: 40px;
-}
-.apart_of_section10{
-    padding-bottom: 300px;
-    padding-top: 50px;
-}
-.s10_buton a{
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #06CA75;
-    background: transparent;
-    border: 2px solid #06CA75;
-    width: 200px;
-    padding: 11px 35px;
-    border-radius: 4px;
-    font-weight: 700;
-    font-size: 14px;
-}
-.s10_buton a:hover{
-    background: #06CA75;
-    color: white;
-}
-.para1{
-    float: left;
-}
-.para2{
-    float: right;
-}
-body section:nth-child(12){
-    background: #26547C;
-}
-.s11_main{
-    padding: 90px 0px;
-}
-.s11_content{
-    display: flex;
-    justify-content: space-between;
-}
-.s11_box{
-    width: 550px;
-    height: 350px;
-}
-.s11_inptbox {
-    padding: 6px 0px;
-}
-#input {
-    padding: 10px 0px;
-    padding-right: 82px;
-    padding-left: 10px;
-    background: transparent;
-    border:1px solid #9a9a9a;
-}
-.s11_head{
-    color: white;
-}
-.s11_name {
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-.s11_number {
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-textarea{
-    padding-left: 10px;
-    padding-top: 8px;
-    background: transparent;
-    border: 1px solid #9a9a9a;
-}
-.s11_buton a {
-    text-decoration: none;
-    color: #9a9a9a;
-    text-transform: uppercase;
-    width: 71px;
-    background: #26547c;
-    padding: 9px 35px;
-    border: 1px solid #ddd;
-    display: block;
-    text-align: center;
-    font-size: 15px;
-    font-weight: 500;
-    margin-top: 24px;
-}
-.s11_buton a:hover{
-    color: #26547C;
-    background: #ddd;
-}
-body footer{
-    background: #2B2B2B;
-    color: white;
-    padding: 80px 0px;
-}
-.f1_p1_content{
-    width: 310px;
-    font-size: 15px;
-    line-height: 25px;
-}
-.f1_title{
-    text-transform: uppercase;
-}
-.f1_title b{color: #06CA75;}
-.f1_p2_content ul li{
-    list-style: none;
-    font-size: 15px;
-    line-height: 30px;
-}
-.f1_p3_content ul li{
-    list-style: none;
-}
-.f1_p3_content ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
-    line-height: 30px;
-}
-.f1_p4_content{
-    width: 272px;
-    font-size: 15px;
-    line-height: 30px;
-}
-.footer_top_area{
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-}
-.f_inputbox{
-    padding: 10px 0px;
-}
-.f_input{
-    padding: 5px;
-}
-.f_inputbox a{
-    color: white;
-    background: #06CA75;
-    padding: 5px 8px;
-    margin-left: -5px;
-}
-.f_icons a i{
-    color: white;
-    margin: 0px 6px;
-    font-size: 14px;
-    background: transparent;
-    width: 30px;
-    height: 24px;
-    border-radius: 100%;
-    width: 25px;
-    display: grid;
-    place-content: center;
-}
-.f_icons a i:hover{
-    background: #06CA75;
-}
-.f_icons a{
-    text-decoration: none;
-}
-.f_icons{
-    display: flex;
-}
-.f1_title{
-    padding: 30px 0px;
-}
-.f_logo{
-    padding: 25px 0px;
-}
-.footer2{background: #212121; padding: 30px 0px;}
-.footer_bottom_area{
-    color: white;
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-}
-.f2_p1 b{
-    color: #EF476F;
-}
-header {
-    z-index: 99;
-    position: sticky;
-    top: 0%;
-    box-shadow: 0px -2px 10px #000000f5;
-    background: white;
-}
-#slider-section{
-    background-image:url(pics/slider_bg.jpg);
-    background-repeat: no-repeat;
-    background-position: cover cover;
-}
-.slider-wraper {
-    display: flex;
-    justify-content: space-between;
-    padding: 200px 0px;
-}
-.slider-content{
-    width: 700px;
-}
-.slider-title h2{
-    font-size: 45px;
-    color: #06CA75;
-    text-transform: uppercase;
-}
-.slider-title h1{
-    font-size: 55px;
-    color: white;
-    text-transform: uppercase;
-    width: 600px;
-}
-.slider-answer p{
-    color: #fff;
-    font-size: 17px;
-    line-height: 27px;
-    font-weight: 200;
-    padding: 30px 0px;
-    margin-bottom: 25px;
-    width: 690px;
-}
-.slider-answer a{
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    width: fit-content;
-    background: #06CA75;
-    padding: 15px 30px;
-    border-radius: 4px;
-    font-weight: 500;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
-    font-size: 14px;
-}
-@keyframes slider {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 100;
-    }
-}
-.slider-hand_img{
-    position: relative;
-    float: right;
-    padding-right: 40px;
-    animation: slider 0.3 ease-in forwards 0s;
-    -webkit-animation: slider 0.3 ease-in forwards 0s;
-}
-.slide_img1{
-    position: absolute;
-    top: 69%;
-    left: 84%;
-    animation: slider 0.3 ease-in forwards 0.5s;
-    -webkit-animation: slider 0.3 ease-in forwards 0.5s;
-}
-.slide_img2{
-    position: absolute;
-    top: 51%;
-    left: 85%;
-    animation: slider 0.3 ease-in forwards 1s;
-    -webkit-animation: slider 0.3 ease-in forwards 1s;
-}
-.slide_img3{
-    position: absolute;
-    top: 34%;
-    left: 84%;
-    animation: slider 0.3 ease-in forwards 1.5s;
-    -webkit-animation: slider 0.3 ease-in forwards 1.5s;
-}
-.slide_img4{
-    position: absolute;
-    top: 24%;
-    left: 73%;
-    animation: slider 0.3 ease-in forwards 2s;
-    -webkit-animation: slider 0.3 ease-in forwards 2s;
-}
-.slide_img5{
-    position: absolute;
-    top: 38%;
-    left: 63%;
-    animation: slider 0.3 ease-in forwards 2.5s;
-    -webkit-animation: slider 0.3 ease-in forwards 2.5s;
-}
-.slide_img6{
-    position: absolute;
-    top:57%;
-    left: 61%;
-    animation: slider 0.3 ease-in forwards 3s;
-    -webkit-animation: slider 0.3 ease-in forwards 3s;
-}
-.slide_img7{
-    position: absolute;
-    top:74%;
-    left: 64%;
-    animation: slider 0.3 ease-in forwards 3.5s;
-    -webkit-animation: slider 0.3 ease-in forwards 3.5s;
-}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Navbar Making</title>
+
+    <script src="https://kit.fontawesome.com/3dafe53148.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <div class="uppercolor">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="container">
+            <div class="navbar">
+                <div>
+                    <a href="#"><img alt="Logo" src="pics/1_.png" /></a>
+                </div>
+                <div class="nav-menu">
+                    <ul class="menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Case Study</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="slider-section">
+        <div class="container">
+            <div class="slider-wraper">
+                <div class="slider-content">
+                    <div class="slider-title">
+                        <h2>Let Us Make</h2>
+                        <h1>Your Website Stand Out</h1>
+                    </div>
+                    <div class="slider-answer">
+                        <p>There are many varations of Passages of Lorem Ipsum available, but the majority have suffered alteratio in same form, by injectedhumor, randomised wordswhich don't look eve. ami lol bolte valobasi tai all time lol boli</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="slider-img_main">
+                    <div class="slider-imgs">
+                        <img class="slider-hand_img" src="pics/hand.png"/>
+                        <img class="slide_img1" src="pics/icon-1.png"/>
+                        <img class="slide_img2" src="pics/icon-2.png"/>
+                        <img class="slide_img3" src="pics/icon-3.png"/>
+                        <img class="slide_img4" src="pics/icon-4.png"/>
+                        <img class="slide_img5" src="pics/icon-5.png"/>
+                        <img class="slide_img6" src="pics/icon-6.png"/>
+                        <img class="slide_img7" src="pics/icon-7.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="ii_side">
+                <div class="boxs">
+                    <div class="logo_1"><img src="pics/Seo.png" /></div>
+                    <div class="logo_1:2"><img src="pics/Seobig.png" /></div>
+                    <div class="title">
+                        <h2>Seo Optimizztion</h2>
+                    </div>
+                    <div class="content">Anything embarrassing hide in middle of text. All the Lorem Ipsum gener on the
+                    </div>
+                </div>
+                <div class="boxs">
+                    <div class="logo_2"><img src="pics/Analysis.png" /></div>
+                    <div class="logo_1:2"><img src="pics/Analysisbig.png" /></div>
+                    <div class="title">
+                        <h2>Web Analysis</h2>
+                    </div>
+                    <div class="content">Anything embarrassing hide in middle of text. All the Lorem Ipsum gener on the
+                    </div>
+                </div>
+                <div class="boxs">
+                    <div class="logo_3"><img src="pics/Email.png" /></div>
+                    <div class="logo_1:2"><img src="pics/Emailbig.png" /></div>
+                    <div class="title">
+                        <h2>Email Marketing</h2>
+                    </div>
+                    <div class="content">Anything embarrassing hide in middle of text. All the Lorem Ipsum gener on the
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="iii_side">
+                <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/U6YNAikV-Lo"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></div>
+                <div class="text">
+                    <div class="heading">
+                        <h1>What is</h1>
+                        <h1>Seo?</h1>
+                    </div>
+                    <div class="answer">But I must explain to you how all this min idea opleasure and praising pain was
+                        born
+                        and Igive you a complete account of the system, and expound the acal teachings of the great
+                        explorer
+                        truth, the master-er of human happiness. No one rejects, dislikes, or avoids plesu because it is
+                        pleasure, but because those who do not
+                        <a class="buton" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="services">
+                <div class="s4_head">
+                    <h1>Best Services</h1>
+                </div>
+                <div class="saritem">
+                    <div class="s4_c">
+                        <div class="s4_altxt_i">
+                            <div class="s4_title">
+                                <h3>App Development</h3>
+                            </div>
+                            <div class="s4_p">
+                                <p>There are many variations of sages of Lorem Ipsum available, but the majrity have
+                                    suffered
+                                    alteration in same form, by injected</p>
+                            </div>
+                        </div>
+                        <div class="s4_l1">
+                            <img src="pics/S4_1.png" />
+                        </div>
+
+                        <div class="s4_c">
+                            <div class="s4_altxt_ii">
+                                <div class="s4_title">
+                                    <h3>Email Marketing</h3>
+                                </div>
+                                <div class="s4_p">
+                                    <p>There are many variations of sages of Lorem Ipsum available, but the majrity have
+                                        suffered
+                                        alteration in same form, by injected</p>
+                                </div>
+                            </div>
+                            <div class="s4_l2">
+                                <img src="pics/S4_2.png" />
+                            </div>
+
+                            <div class="s4_c">
+                                <div class="s4_altxt_iii">
+                                    <div class="s4_title">
+                                        <h3>Web Development</h3>
+                                    </div>
+                                    <div class="s4_p">
+                                        <p>There are many variations of sages of Lorem Ipsum available, but the majrity
+                                            have
+                                            suffered alteration in same form, by injected</p>
+                                    </div>
+                                </div>
+                                <div class="s4_l3">
+                                    <img src="pics/S4_3.png" />
+                                </div>
+
+                                <div class="s4_c">
+                                    <div class="s4_altxt_iv">
+                                        <div class="s4_title">
+                                            <h3>Web Analysis</h3>
+                                        </div>
+                                        <div class="s4_p">
+                                            <p>There are many variations of sages of Lorem Ipsum available, but the
+                                                majrity
+                                                have
+                                                suffered alteration in same form, by injected</p>
+                                        </div>
+                                    </div>
+                                    <div class="s4_l4">
+                                        <img src="pics/S4_4.png" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="s5_main">
+                <div class="s5_alltxt">
+                    <div class="s5_i_title">
+                        <h1>Best Solutions</h1>
+                    </div>
+                    <div class="s5_ii_title">
+                        <h1>For Your Business</h1>
+                    </div>
+                    <div class="s5_answer">
+                        <p>Passages of Lorem Ipsum available, but the majority have suffered ation in some form, by
+                            injected humour, or randomised words which don't look even slightly belvable. If you are
+                            going to use looking at its layout. The point of using Lorem Ipsum has more-or-less normal
+                            distribution of letters, as opposed to using</p>
+                    </div>
+                    <div class="s5_buton">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+                <div>
+                    <img alt="Sreenshot" src="pics/solutions.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="s6_main">
+                <div class="s6_head s4_head">
+                    <h1>Working Process</h1>
+                </div>
+                <div class="s6_allpic">
+                    <div class="s6_l1">
+                        <img src="pics/s6_1.png" />
+                    </div>
+                    <div class="s6_l2">
+                        <img src="pics/s6_2.png" />
+                    </div>
+                    <div class="s6_l3">
+                        <img src="pics/s6_3.png" />
+                    </div>
+                    <div class="s6_l4">
+                        <img src="pics/s6_4.png" />
+                    </div>
+                </div>
+                <div class="s6_alltxt">
+                    <div class="s6_title">
+                        <h3>Idea</h3>
+                        <h3>Process</h3>
+                        <h3>Development</h3>
+                        <h3>Launch</h3>
+                    </div>
+                    <div class="s6_answer">
+                        <p>There are many vins of LoreIp sum available,ashes</p>
+                        <p>There are many vins of LoreIp sum available,ashes</p>
+                        <p>There are many vins of LoreIp sum available,ashes</p>
+                        <p>There are many vins of LoreIp sum available,ashes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="s7_main">
+                <div class="s7_head s4_head">
+                    <h1>Case Study</h1>
+                </div>
+                <div class="allcontent">
+                    <div class="s7_box s7_i_box">
+                        <div class="s7_p1 s7_p">
+                            <img src="pics/s7_1.jpg" />
+                        </div>
+                        <div class="s7_alltxt">
+                            <h3>All the Lorem Ipsum gener</h3>
+                            <p>Randomised words which don't look n slightly believable. If you are going to use a
+                                passayou
+                                need to be sure kew ki..</p>
+                        </div>
+                    </div>
+
+
+                    <div class="s7_box s7_ii_box">
+                        <div class="s7_p2 s7_p">
+                            <img src="pics/s7_2.jpg" />
+                        </div>
+                        <div class="s7_alltxt">
+                            <h3>All the Lorem Ipsum gener</h3>
+                            <p>Randomised words which don't look n slightly believable. If you are going to use a
+                                passayou
+                                need to be sure kew ki..</p>
+                        </div>
+                    </div>
+
+                    <div class="s7_box s7_iii_box">
+                        <div class="s7_p3 s7_p">
+                            <img src="pics/s7_3.jpg" />
+                        </div>
+                        <div class="s7_alltxt">
+                            <h3>All the Lorem Ipsum gener</h3>
+                            <p>Randomised words which don't look n slightly believable. If you are going to use a
+                                passayou
+                                need to be sure kew ki..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="s8_main">
+                <div class="s8_head s4_head">
+                    <h1>Pricing Table</h1>
+                </div>
+                <div class="s8_contant">
+                    <div class="s8_b s8_b1">
+                        <h1>Personal</h1>
+                        <p>One Website</p>
+                        <p>Five User</p>
+                        <p>100 Gb Bandwidth</p>
+                        <p>2 GB Storage</p>
+                        <p>24x7 Support</p>
+                        <div class="s8_buton s8_btn1"><a href="#">Sign Up</a></div>
+                        <div class="s8_c_box i">
+                            <b>$</b>
+                            <h1>35</h1>
+                            <p>/m</p>
+                        </div>
+                    </div>
+
+                    <div class="s8_b s8_b2">
+                        <h1>Business</h1>
+                        <p>One Website</p>
+                        <p>Five User</p>
+                        <p>100 Gb Bandwidth</p>
+                        <p>2 GB Storage</p>
+                        <p>24x7 Support</p>
+                        <div class="s8_buton s8_btn2"><a href="#">Sign Up</a></div>
+                        <div class="s8_c_box ii">
+                            <b>$</b>
+                            <h1>45</h1>
+                            <p>/m</p>
+                        </div>
+                    </div>
+
+                    <div class="s8_b s8_b3">
+                        <h1>Business</h1>
+                        <p>One Website</p>
+                        <p>Five User</p>
+                        <p>100 Gb Bandwidth</p>
+                        <p>2 GB Storage</p>
+                        <p>24x7 Support</p>
+                        <div class="s8_buton s8_btn3"><a href="#">Sign Up</a></div>
+                        <div class="s8_c_box iii">
+                            <b>$</b>
+                            <h1>55</h1>
+                            <p>/m</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="s9_main">
+                <div class="s9_person_main">
+                    <div class="s9_person">
+                        <div class="s9_pic s9_pic1">
+                            <img src="pics/person1.jpg" />
+                        </div>
+                        <div class="s9_title">
+                            <h1>Henry Perry</h1>
+                            <p>Designer</p>
+                        </div>
+                    </div>
+                    <div class="s9_person">
+                        <div class="s9_pic s9_pic1">
+                            <img src="https://template.hasthemes.com/seoexp/seoexp/img/testimonial/2.jpg" />
+                        </div>
+                        <div class="s9_title">
+                            <h1>Jack Ramirez</h1>
+                            <p>Designer</p>
+                        </div>
+                    </div>
+                    <div class="s9_person">
+                        <div class="s9_pic s9_pic1">
+                            <img src="pics/person3.jpg" />
+                        </div>
+                        <div class="s9_title">
+                            <h1>Albert James</h1>
+                            <p>Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="s9_answer">
+                    <div class="s9_p">
+                        <p>Sed perp[icistis unde amnis iste nu error sit volluptatem accusantium doloermq audantium
+                            totam rem aperiam</p>
+                    </div>
+                    <div class="s9_p">
+                        <p>Sed perp[icistis unde amnis iste nu error sit volluptatem accusantium doloermq audantium
+                            totam rem aperiam</p>
+                    </div>
+                    <div class="s9_p">
+                        <p>Sed perp[icistis unde amnis iste nu error sit volluptatem accusantium doloermq audantium
+                            totam rem aperiam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="apart_of_section10">
+            <div class="container">
+                <div class="s10_main">
+                    <div class="s10_head s4_head">
+                        <h1>Latest Blog</h1>
+                    </div>
+                    <div class="s10_content">
+                        <div class="s10_para para1">
+                            <div class="s10_title"><a href="#">
+                                    <h1>Wariations of Passages of Lorem Ipsum Available ashes here.</h1>
+                                </a></div>
+                            <div class="s10_answer">
+                                <p>Must explain to you how all this mistaken idea of denouncing pl and praising pain was
+                                    born and I will give you a complete account of the sm, ad expound the actual
+                                    teachings
+                                    of the great explorer of the truth, te ma buder of human happiness. No one rejects,
+                                    dislikes,</p>
+                            </div>
+                            <div class="s10_buton"><a href="#">Read More</a></div>
+                        </div>
+
+                        <div class="s10_para para2">
+                            <div class="s10_title"><a href="#">
+                                    <h1>Wariations of Passages of Lorem Ipsum Available ashes here.</h1>
+                                </a></div>
+                            <div class="s10_answer">
+                                <p>Must explain to you how all this mistaken idea of denouncing pl and praising pain was
+                                    born and I will give you a complete account of the sm, ad expound the actual
+                                    teachings
+                                    of the great explorer of the truth, te ma buder of human happiness. No one rejects,
+                                    dislikes,</p>
+                            </div>
+                            <div class="s10_buton"><a href="#">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="s11_main">
+                <div class="s11_head s4_head">
+                    <h1>Contact Us</h1>
+                </div>
+                <div class="s11_content">
+                    <div class="mapouter">
+                        <div class="gmap_canvas"><iframe width="550" height="350" id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=Jashore&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                                href="https://getasearch.com/fmovies">parmanu 1080p fmovies</a><br>
+                            <style>
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                    height: 350px;
+                                    width: 550px;
+                                }
+                            </style><a href="https://www.embedgooglemap.net">google maps website embed</a>
+                            <style>
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                    height: 350px;
+                                    width: 550px;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                    <div class="s11_box">
+                        <div class="s11_inptbox">
+                            <input id="input" class="s11_name" type="text" placeholder="Name" />
+                            <input id="input" class="s11_email" type="email" placeholder="Email" />
+                        </div>
+                        <div class="s11_inptbox">
+                            <input id="input" class="s11_number" type="text" placeholder="Phone" />
+                            <input id="input" class="s11_subject" type="text" placeholder="Subject" />
+                        </div>
+                        <div class="s11_textara">
+                            <textarea placeholder="Massage" cols="74" rows="10"></textarea>
+                        </div>
+                        <div class="s11_buton">
+                            <a href="#">Submit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer_top_area">
+                <div class="f_p1">
+                    <div class="f_logo">
+                        <img src="https://template.hasthemes.com/seoexp/seoexp/img/logo-white.png" />
+                    </div>
+                    <div class="f1_p1_content">
+                        <p>There are many variations of pof em Ipsum avalable, but the majority haveatime form,
+                            binjected humour, or romised scvono dos nai..but tha mojat man.</p>
+                    </div>
+                </div>
+
+                <div class="f_p2">
+                    <div class="f1_title">
+                        <h3>Contact <b>us</b></h3>
+                    </div>
+                    <div class="f1_p2_content">
+                        <ul>
+                            <li>Keshabpur, Jashore, Khulna</li>
+                            <li>Crossroad930</li>
+                            <br />
+                            <li>P : 880 1739-720751</li>
+                            <li>F : 55 44 77 62</li>
+                            <li>E : abdullahibnmasud2007@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="f_p3">
+                    <div class="f1_title">
+                        <h3>Quick <b>Links</b></h3>
+                    </div>
+                    <div class="f1_p3_content">
+                        <ul>
+                            <li><a href="#">Our Service</a></li>
+                            <li><a href="#">Our Company</a></li>
+                            <li><a href="#">Vision Company</a></li>
+                            <li><a href="#">Our Products</a></li>
+                            <li><a href="#">Our Fajlami</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="f_p4">
+                    <div class="f1_title">
+                        <h3>Subscribe <b>Now</b></h3>
+                    </div>
+                    <div class="f1_p4_content">
+                        <p>There are many variations of reavalable, but the majority</p>
+                    </div>
+                    <div class="f_inputbox">
+                        <input class="f_input" type="email" placeholder="Email" />
+                        <a href="#"><i class="far fa-paper-plane"></i></a>
+                    </div>
+
+                    <div class="f_icons">
+                        <a href="https://facebook.com/Abdulla1400x"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://192.168.0.1"><i class="fas fa-wifi"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="https://www.pinterest.com/abdullahibnmasud2007/"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://instagram.com/Abdullah140x"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+            </div>
+    </footer>
+    <div class="footer2">
+        <div class="container">
+            <div class="footer_bottom_area">
+                <div class="f2_p1">
+                    <p>Copyright © <b>Abdullah</b> 2021 | All right reserved.</p>
+                </div>
+                <div class="f2_p2">
+                    <p>Created by Hasthemes With <i style="color: #EF476F;" class="fas fa-heart"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
